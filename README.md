@@ -31,10 +31,10 @@ Making a 3D platform for children to learn basic coding (Java) with fun games. T
 
 ### What complexity points will this project contain
 
-React Flow (3 points), Three.js (2 points), Twilio (1 point), Web Audio API (1 point), ShareDB (2 points)
+React Flow (3 points), Three.js (2 points), Twilio (1 point), Auth0 (1 point), ShareDB (2 points)
 
 ### What complexity points will be attempted as bonus for the challenge factor
-PeerJS (1 point), OpenAI (1 point)
+PeerJS (1 point), OpenAI (1 point), Web Audio API (1 point)
 
 ### What you aim to complete for the alpha version, beta version, and final version
 
