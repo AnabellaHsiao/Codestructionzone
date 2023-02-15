@@ -27,7 +27,7 @@ Shu Sun - 1005948487
 
 ### Description of the web application
 
-Making a 3D platform for children to learn basic coding (Java) with fun games. There would be single, or duo-player (versus and teamwork) options.
+Making a 3D platform for children to learn basic coding (JavaScript) with fun games. There would be single, or duo-player (versus and teamwork) options.
 
 ### What complexity points will this project contain
 
