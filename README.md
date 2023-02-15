@@ -38,6 +38,6 @@ PeerJS (1 point), Web Audio API (1 point), Auth0 (1 point)
 
 ### What you aim to complete for the alpha version, beta version, and final version
 
-Alpha: Front-end implemented\n
-Beta: Pseudo-backend implemented\n
-Final version: Databases, servers impleneted and up\n
+Alpha: Front-end implemented
+Beta: Pseudo-backend implemented
+Final version: Databases, servers impleneted and up
