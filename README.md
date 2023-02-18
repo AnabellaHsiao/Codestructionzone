@@ -1,4 +1,6 @@
-## Project Title and Team Name
+# Codestruction Zone
+
+## Project Title and Team Name 
 
 **Team Name:** Dark Web Illuminati
 
@@ -130,4 +132,6 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
 - [ ] Integration with Web Audio API for improved sound and music quality
 
+---
 
+Now let's start the Codestruction! 👷🚧🐱‍💻
