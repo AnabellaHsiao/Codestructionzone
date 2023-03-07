@@ -8,30 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/compile", (req, res) => {
-  //getting the required data from the request
   let code = req.body.code;
-  //   let language = req.body.language;
+
   let input = req.body.input;
-  //console.log("\n-----------------------------------------\n");
-
-  //   if (language === "python") {
-  //     language = "py";
-  //   }
-
-  //   let data = {
-  //     code: code,
-  //     language: language,
-  //     input: input,
-  //   };
-  //   let config = {
-  //     method: "post",
-  //     url: "https://ce.judge0.com",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     data: data,
-  //   };
-  //calling the code compilation API
 
   const options = {
     method: "POST",
@@ -41,20 +20,11 @@ app.post("/compile", (req, res) => {
       "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
     },
     data: {
-      source_code: "console.log('yes');",
+      source_code: code,
       language_id: 63,
     },
   };
 
-  //   Axios(options)
-  //     .then((response) => {
-  //       res.send(response.data);
-  //       console.log(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  console.log("here");
   axios
     .request(options)
     .then(function (response) {
