@@ -12,6 +12,7 @@ app.post("/compile", (req, res) => {
   let code = req.body.code;
   //   let language = req.body.language;
   let input = req.body.input;
+  //console.log("\n-----------------------------------------\n");
 
   //   if (language === "python") {
   //     language = "py";
@@ -39,7 +40,7 @@ app.post("/compile", (req, res) => {
       "X-RapidAPI-Key": "d54f68f664msh4dcc91fed2cd856p1f9862jsn60ced304edec",
       "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
     },
-    body: {
+    data: {
       source_code: "console.log('yes');",
       language_id: 63,
     },
@@ -58,6 +59,7 @@ app.post("/compile", (req, res) => {
     .request(options)
     .then(function (response) {
       console.log(response.data);
+      res.send(response.data);
     })
     .catch(function (error) {
       console.error(error);
