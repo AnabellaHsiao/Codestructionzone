@@ -43,7 +43,6 @@ function App() {
     // Post request to compile endpoint
     Axios.post(`http://localhost:8000/compile`, {
       code: userCode,
-      input: userInput,
     })
       .then((res) => {
         setUserOutput(res.data.stdout);
@@ -87,13 +86,12 @@ function App() {
           </button>
         </div>
         <div className="right-container">
-          <h4>Input:</h4>
-          <div className="input-box">
-            <textarea
-              id="code-inp"
-              onChange={(e) => setUserInput(e.target.value)}
-            ></textarea>
-          </div>
+          <h4>Exercise 1: Printing</h4>
+
+          <h4>Console.log() can be used to print out messages. For example, console.log(“test”) outputs “test”.</h4>
+          <h4>Task: Print out “Hello Codestruction” using console.log()</h4>
+
+
           <h4>Output:</h4>
           {loading ? (
             <div className="spinner-box">
