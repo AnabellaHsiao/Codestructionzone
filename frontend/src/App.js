@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Editor from "@monaco-editor/react";
 import Navbar from "./Components/Navbar";
-import Axios from "axios";
+import Axios, {all} from "axios";
 import spinner from "./spinner.svg";
 
 function App() {
@@ -19,9 +19,6 @@ function App() {
   // State variable to set editors default font size
   const [fontSize, setFontSize] = useState(20);
 
-  // State variable to set users input
-  const [userInput, setUserInput] = useState("");
-
   // State variable to set users output
   const [userOutput, setUserOutput] = useState("");
 
@@ -29,9 +26,23 @@ function App() {
   // while fetching data
   const [loading, setLoading] = useState(false);
 
+  const [result, setResult] = useState("");
+
+  const [allowNext, setAllowNext] = useState(false);
+
   const options = {
     fontSize: fontSize,
   };
+
+  function changeResult(S) {
+    if (S.trim() === "Hello Codestruction") {
+      setResult("Amazing!");
+      // document.getElementById("next").classList.remove("hidden");
+      setAllowNext(true);
+    } else {
+      setResult("Try Again!");
+    }
+  }
 
   // Function to call the compile endpoint
   function compile() {
@@ -44,12 +55,14 @@ function App() {
     Axios.post(`http://localhost:8000/compile`, {
       code: userCode,
     })
-      .then((res) => {
-        setUserOutput(res.data.stdout);
+      .then(async (res) => {
+        await setUserOutput(res.data.stdout);
+        await changeResult(res.data.stdout);
       })
       .then(() => {
         setLoading(false);
-      });
+      }).then(() => {
+    })
   }
 
   // Function to clear the output screen
@@ -88,7 +101,8 @@ function App() {
         <div className="right-container">
           <h4>Exercise 1: Printing</h4>
 
-          <h4>Console.log() can be used to print out messages. For example, console.log(“test”) outputs “test”.</h4>
+          <h4>Console.log() can be used to print out messages.
+              For example, console.log(“test”) outputs “test”.</h4>
           <h4>Task: Print out “Hello Codestruction” using console.log()</h4>
 
 
@@ -100,6 +114,7 @@ function App() {
           ) : (
             <div className="output-box">
               <pre>{userOutput}</pre>
+              <h4>{result}</h4>
               <button
                 onClick={() => {
                   clearOutput();
@@ -108,6 +123,11 @@ function App() {
               >
                 Clear
               </button>
+              {allowNext ?               <button
+                  className="next-btn" id = "next"
+              >
+                Next
+              </button> : null}
             </div>
           )}
         </div>
