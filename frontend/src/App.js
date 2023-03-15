@@ -4,7 +4,7 @@ import "./App.css";
 import Editor from "@monaco-editor/react";
 import Navbar from "./Components/Navbar";
 import Axios, {all} from "axios";
-import spinner from "./spinner.svg";
+import spinner from "./dancing.gif";
 
 function App() {
   // State variable to set users source code
@@ -109,7 +109,7 @@ function App() {
           <h4>Output:</h4>
           {loading ? (
             <div className="spinner-box">
-              <img src={spinner} alt="Loading..." />
+              <img className="loading" src={spinner} alt="Loading..." />
             </div>
           ) : (
             <div className="output-box">
