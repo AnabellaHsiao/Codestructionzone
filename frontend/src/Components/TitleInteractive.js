@@ -27,8 +27,9 @@ const TitleInteractive = () => {
     camera.position.set(1, 1.5, 10);
     camera.lookAt(1, 1.5, 0);
 
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha : true});
     renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
     const loader = new GLTFLoader();
@@ -45,12 +46,6 @@ const TitleInteractive = () => {
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
     scene.add(ambientLight);
-
-    // const filepath = "/assets/3D/codestructionzone.gltf";
-    // fetch(filepath)
-    //   .then((response) => response.text())
-    //   .then((data) => console.log(data))
-    //   .catch((error) => console.error(error));
 
     loader.load("/assets/3D/codestructionzone.gltf", (gltf) => {
       console.log(gltf);
