@@ -6,16 +6,16 @@
 }
 .main {
   display: flex;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 150px);
 }
 .left-container {
   position: relative;
   flex: 60%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 150px);
 }
 .right-container {
   flex: 40%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 150px);
   display: flex;
   flex-direction: column;
   background-color: #242424;

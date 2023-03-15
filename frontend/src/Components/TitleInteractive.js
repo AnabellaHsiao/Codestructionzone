@@ -4,8 +4,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 const TitleInteractive = () => {
   const containerStyle = {
-    width: "500px",
-    height: "180px",
+    width: "400px",
+    height: "150px",
   };
 
   const containerRef = useRef();
@@ -14,9 +14,6 @@ const TitleInteractive = () => {
     const container = containerRef.current;
 
     const scene = new THREE.Scene();
-
-    console.log(container.clientWidth);
-    console.log(container.clientHeight);
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -48,7 +45,6 @@ const TitleInteractive = () => {
     scene.add(ambientLight);
 
     loader.load("/assets/3D/codestructionzone.gltf", (gltf) => {
-      console.log(gltf);
       scene.add(gltf.scene);
     });
 

@@ -84,7 +84,7 @@ function App() {
         <div className="left-container">
           <Editor
             options={options}
-            height="calc(100vh - 50px)"
+            height="calc(100vh - 150px)"
             width="100%"
             theme={userTheme}
             language={userLang}
