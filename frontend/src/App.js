@@ -5,7 +5,7 @@ import Editor from "@monaco-editor/react";
 import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Axios from "axios";
-import spinner from "./spinner.svg";
+import spinner from "./dancing.gif";
 import ApiService from "./Components/ApiService";
 
 function App() {
@@ -26,15 +26,27 @@ function App() {
 
   // State variable to set users output
   const [userOutput, setUserOutput] = useState("");
+  const [result, setResult] = useState("");
 
   // Loading state variable to show spinner
   // while fetching data
   const [loading, setLoading] = useState(false);
   const [isToggled, setToggle] = useState(false);
+  const [allowNext, setAllowNext] = useState(false);
 
   const options = {
     fontSize: fontSize,
   };
+
+  function changeResult(S) {
+    if (S.trim() === "Hello Codestruction") {
+      setResult("Amazing!");
+      // document.getElementById("next").classList.remove("hidden");
+      setAllowNext(true);
+    } else {
+      setResult("Try Again!");
+    }
+  }
   // Function to clear the output screen
   function clearOutput() {
     setUserOutput("");
@@ -50,8 +62,9 @@ function App() {
 
     // Post request to compile endpoint
     ApiService.compile(userCode)
-      .then((res) => {
-        setUserOutput(res.data.stdout);
+      .then(async (res) => {
+        await setUserOutput(res.data.stdout);
+        await changeResult(res.data.stdout);
       })
       .then(() => {
         setLoading(false);
@@ -60,7 +73,7 @@ function App() {
 
   return (
     <div>
-      {!isToggled ? (
+      {isToggled ? (
         <div className="App">
           <Navbar
             userLang={userLang}
@@ -105,6 +118,7 @@ function App() {
               ) : (
                 <div className="output-box">
                   <pre>{userOutput}</pre>
+                  <h4>{result}</h4>
                   <button
                     onClick={() => {
                       clearOutput();
@@ -113,6 +127,11 @@ function App() {
                   >
                     Clear
                   </button>
+                  {allowNext ? (
+                    <button className="next-btn" id="next">
+                      Next
+                    </button>
+                  ) : null}
                 </div>
               )}
             </div>
