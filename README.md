@@ -64,11 +64,6 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
     - The editor will be used to compile the code and provide feedback on the correctness of the user's solution.
 
-- **ShareDB (2 points)**
-
-    - ShareDB is a real-time database that will be used to store the coding challenges based on their difficulty, user information including accomplishments and challenges passed.
-
-    - The database will provide a backend for the platform to efficiently retrieve and save data, allowing for a seamless user experience.
 
 - **OpenAI (1 point)**
 
