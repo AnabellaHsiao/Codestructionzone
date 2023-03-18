@@ -1,6 +1,7 @@
 import React from "react";
 import Select from "react-select";
 import "./Navbar.css";
+import TitleInteractive from "./TitleInteractive";
 
 const Navbar = ({
   userLang,
@@ -17,7 +18,7 @@ const Navbar = ({
   ];
   return (
     <div className="navbar">
-      <h1>Codestruction Zone 👷‍♀️🚧🦺</h1>
+      <TitleInteractive />
       <Select
         options={languages}
         value={userLang}
