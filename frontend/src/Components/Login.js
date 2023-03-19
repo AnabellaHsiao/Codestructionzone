@@ -1,5 +1,3 @@
-
-
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -16,6 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import ApiService from "./ApiService";
+let USER = null;
 
 function Copyright(props) {
   return (
@@ -43,38 +42,35 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
 
-  if(Signup){
-     ApiService.Signup(data)
-       .then((res) => {
-         console.log(res);
-       })
-       .then(() => {});
+    data.get("email");
+    data.get("password");
 
-  }else
-  {
-      ApiService.Signup(data)
+    if (Signup) {
+      ApiService.Signup(data.get("email"), data.get("password"))
         .then((res) => {
-          console.log(res);
+          setSignup(false);
         })
         .then(() => {});
+    } else {
+      ApiService.Signin(data.get("email"), data.get("password"))
+        .then((res) => {
+          //console.log(res.data.username);
+          USER = res.data.username;
+          //console.log(USER);
+        })
+        .then(() => {
+          setTimeout(() => {
+            ApiService.MySession().then(console.log);
+          }, 2000);
+        })
 
-
-  }
-    
- 
-    
+    }
   };
-    const Toggle = (event) => {
-      event.preventDefault();
-      (Signup? setSignup(false):setSignup(true));
-     
-     
-    };
+  const Toggle = (event) => {
+    event.preventDefault();
+    Signup ? setSignup(false) : setSignup(true);
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -120,10 +116,10 @@ export default function Login() {
               id="password"
               autoComplete="current-password"
             />
-            <FormControlLabel
+            {/* <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
-            />
+            /> */}
             <Button
               type="submit"
               fullWidth

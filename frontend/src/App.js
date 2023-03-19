@@ -31,6 +31,7 @@ function App() {
   // Loading state variable to show spinner
   // while fetching data
   const [loading, setLoading] = useState(false);
+  ///sets the login state
   const [isToggled, setToggle] = useState(false);
   const [allowNext, setAllowNext] = useState(false);
 

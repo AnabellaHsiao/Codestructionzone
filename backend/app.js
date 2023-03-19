@@ -15,7 +15,7 @@ import session from "express-session";
 app.use(
   session({
     secret: "sheeeeeeeesh",
-    resave: false,
+    resave: true,
     saveUninitialized: true,
   })
 );
@@ -28,11 +28,19 @@ try {
   console.error("Unable to connect to the database:", error);
 }
 
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.use("/compiler", compilerRouter);
- app.use("/users", usersRouter);
+app.use("/users", usersRouter);
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
   else console.log("HTTP server on http://localhost:%s", PORT);
 });
-
