@@ -64,7 +64,6 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
     - The editor will be used to compile the code and provide feedback on the correctness of the user's solution.
 
-
 - **OpenAI (1 point)**
 
     - OpenAI will be used to provide interactive hints for users when they are stuck on a coding challenge.
@@ -73,13 +72,25 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
     - Will be especially helpful for younger users who may need more guidance in the learning process.
 
+- **Auth0 (1 point)**
+
+    - Auth0 will be used for usser authentication and management.
+
+    - The platform will allow users to create their own profiles, track their progress, and earn badges for completing coding challenges.
+
+    - This will be especially important for protecting children's personal information and ensuring a safe and secure learning environment.
+
+- **Socket.io (1 point)**
+
+    - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
+
+    - With Socket.io, the platform can support real-time updates and messaging, enabling the mini users to see each other's progress and communicate with each other in real-time during the versus mode.
+
 ## Complexity Points to be Attempted as a Bonus
 
 - **PeerJS (1 point)**
 
 - **Web Audio API (1 point)**
-
-- **Auth0 (1 point)**
 
 ## Features by Alpha Version
 
