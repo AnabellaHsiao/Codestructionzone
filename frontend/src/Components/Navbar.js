@@ -20,12 +20,6 @@ const Navbar = ({
     <div className="navbar">
       <TitleInteractive />
       <Select
-        options={languages}
-        value={userLang}
-        onChange={(e) => setUserLang(e.value)}
-        placeholder={userLang}
-      />
-      <Select
         options={themes}
         value={userTheme}
         onChange={(e) => setUserTheme(e.value)}

@@ -1,6 +1,7 @@
 import Axios from "axios";
 
 const compile =  (userCode) => {
+  console.log("here 2");
   return Axios.post(`http://localhost:8000/compiler`, {
     code: userCode,
   }).then((res) => {

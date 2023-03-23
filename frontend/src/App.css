@@ -114,3 +114,9 @@ h4 {
 .run-btn:active {
   background-color: #fce101;
 }
+
+.compiling-loading {
+  padding: 2px 40px;
+  font-weight: bold;
+  color: white;
+}
