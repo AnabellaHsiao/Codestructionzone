@@ -117,8 +117,6 @@ function App() {
   };
 
   function changeResult(S) {
-    console.log(S);
-    console.log(Correct[currentLevel - 1]);
     if (S === Correct[currentLevel - 1] && currentLevel !== 6) {
       setResult("Amazing! On to the next Level!");
       setAllowNext(true);
