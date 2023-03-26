@@ -85,6 +85,10 @@ const baseState = [
   "// Codestruct your code here!\n let A = [27, 6, 37, 12, 16, 7, 12, 18, 35, 30];",
 ];
 
+const checkup = [
+    "console.log", "*", "else", "for", "while", "A[5]"
+];
+
 function App() {
   // State variable to set users source code
   const [userCode, setUserCode] = useState(``);
@@ -117,10 +121,12 @@ function App() {
   };
 
   function changeResult(S) {
-    if (S === Correct[currentLevel - 1] && currentLevel !== 6) {
+      if (S.toLowerCase() === Correct[currentLevel - 1].toLowerCase() && !userCode.includes(checkup[currentLevel-1])) {
+          setResult("Don't try to cheat. Please follow the instructions carefully.");
+      } else if (S.toLowerCase() === Correct[currentLevel - 1].toLowerCase() && currentLevel !== 6) {
       setResult("Amazing! On to the next Level!");
       setAllowNext(true);
-    } else if (S === Correct[currentLevel - 1] && currentLevel === 6) {
+    } else if (S.toLowerCase() === Correct[currentLevel - 1].toLowerCase() && currentLevel === 6) {
       setResult("Congratulations! You completed all Levels!");
     } else {
       setResult("Try Again!");
