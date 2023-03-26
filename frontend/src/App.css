@@ -84,6 +84,8 @@
 }
 h4 {
   color: #ffcc00;
+  white-space: pre-line;
+  font-size: 12px;
 }
 #code-inp {
   box-sizing: border-box;

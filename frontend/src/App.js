@@ -26,16 +26,18 @@ const LevelDetails = [
 
   "If and else statements can be used to make decisions.\n" +
     "For example: for the statement:\n" +
-    "if(a=1)\n" +
-    "    Console.log(“1”)\n" +
-    "else\n" +
-    "    Console.log(“not 1”)\n" +
+    "if(a=1) {\n" +
+    "    console.log(“1”)\n" +
+    "} else {\n" +
+    "    console.log(“not 1”)\n" +
+    "}\n" +
     "The code will print “1” if a is equal to 1 and “not 1” otherwise.",
 
   "For loops can be used for running lines of code multiple times.\n" +
     "For example: for the statement:\n" +
-    "for(let i=1; i<=3; i++)\n" +
-    "    Console.log(“Codestruction”)\n" +
+    "for(let i=1; i<=3; i++){\n" +
+    "    console.log(“Codestruction”)\n" +
+    "}\n" +
     "The code will print “Codestruction” 3 times.",
 
   "While loops work similarly to for loops. However, you need\n" +
@@ -43,7 +45,7 @@ const LevelDetails = [
     "For example: for the statement:\n" +
     "i=1;\n" +
     "while(i<=3) {\n" +
-    "    Console.log(“Yes”)\n" +
+    "    console.log(“Yes”)\n" +
     "    i = i+1;\n" +
     "}\n" +
     "The code will print “yes” 3 times.",
