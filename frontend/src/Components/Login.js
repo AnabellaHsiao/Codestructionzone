@@ -14,6 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import ApiService from "./ApiService";
+import {useAuth0} from '@auth0/auth0-react'
 
 function Copyright(props) {
   return (
@@ -37,6 +38,7 @@ const theme = createTheme();
 
 export default function Login() {
   const [Signup, setSignup] = useState(false);
+  const {loginWithRedirect, isAuthenticated } = useAuth0();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -122,14 +124,16 @@ export default function Login() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              {Signup ? " Sign Up" : "Sign In"}
-            </Button>
+            !isAuthenticated && (
+              <Button onClick={() => loginWithRedirect()}
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                {Signup ? " Sign Up" : "Sign In"}
+              </Button>
+            )
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">

@@ -10,8 +10,11 @@ import ApiService from "./Components/ApiService";
 import * as Y from "yjs";
 import { WebrtcProvider } from 'y-webrtc';
 import { MonacoBinding } from 'y-monaco';
+import {useAuth0} from "@auth0/auth0-react";
 
 function Collaborative() {
+    const {isAuthenticated } = useAuth0();
+
     // State variable to set users source code
     const [userCode, setUserCode] = useState(``);
 
@@ -24,8 +27,6 @@ function Collaborative() {
     // State variable to set editors default font size
     const [fontSize, setFontSize] = useState(20);
 
-    // State variable to set users input
-    const [userInput, setUserInput] = useState("");
 
     // State variable to set users output
     const [userOutput, setUserOutput] = useState("");
@@ -34,7 +35,6 @@ function Collaborative() {
     // Loading state variable to show spinner
     // while fetching data
     const [loading, setLoading] = useState(false);
-    const [isToggled, setToggle] = useState(false);
     const [allowNext, setAllowNext] = useState(false);
 
     const editorRef = useRef(null);
@@ -89,7 +89,7 @@ function Collaborative() {
 
     return (
         <div>
-            {isToggled ? (
+            {isAuthenticated ? (
                         <div className="App">
                             <Navbar
                                 userLang={userLang}

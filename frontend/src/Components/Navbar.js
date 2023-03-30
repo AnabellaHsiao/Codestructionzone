@@ -2,6 +2,7 @@ import React from "react";
 import Select from "react-select";
 import "./Navbar.css";
 import TitleInteractive from "./TitleInteractive";
+import {useAuth0} from "@auth0/auth0-react";
 
 const Navbar = ({
   userLang,
@@ -11,11 +12,12 @@ const Navbar = ({
   fontSize,
   setFontSize,
 }) => {
-  const languages = [{ value: "javascript", label: "javascript" }];
+  //const languages = [{ value: "javascript", label: "javascript" }];
   const themes = [
     { value: "vs-dark", label: "Dark" },
     { value: "light", label: "Light" },
   ];
+  const {logout} = useAuth0();
   return (
     <div className="navbar">
       <TitleInteractive />
@@ -36,6 +38,10 @@ const Navbar = ({
           setFontSize(e.target.value);
         }}
       />
+
+        <button className="log-out" onClick={() => logout()}>
+            Log Out
+        </button>
     </div>
   );
 };
