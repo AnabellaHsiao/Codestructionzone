@@ -2,7 +2,7 @@ import React from "react";
 import Select from "react-select";
 import "./Navbar.css";
 import TitleInteractive from "./TitleInteractive";
-import {useAuth0} from "@auth0/auth0-react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Navbar = ({
   userLang,
@@ -17,10 +17,10 @@ const Navbar = ({
     { value: "vs-dark", label: "Dark" },
     { value: "light", label: "Light" },
   ];
-  const {logout} = useAuth0();
+  const { logout } = useAuth0();
   return (
     <div className="navbar">
-      <TitleInteractive />
+      <TitleInteractive width="400px" height="150px" />
       <Select
         options={themes}
         value={userTheme}
@@ -39,9 +39,9 @@ const Navbar = ({
         }}
       />
 
-        <button className="log-out" onClick={() => logout()}>
-            Log Out
-        </button>
+      <button className="log-out" onClick={() => logout()}>
+        Log Out
+      </button>
     </div>
   );
 };
