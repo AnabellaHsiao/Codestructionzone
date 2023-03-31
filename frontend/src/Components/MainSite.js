@@ -8,8 +8,8 @@ import ApiService from "./ApiService.js";
 import CompilingInteractive from "./CompilingInteractive";
 import { compilingScreenSplash } from "./CompilingLoadingSplashes";
 import * as Y from "yjs";
-import { WebrtcProvider } from 'y-webrtc';
-import { MonacoBinding } from 'y-monaco';
+import {WebrtcProvider} from "y-webrtc";
+import {MonacoBinding} from "y-monaco";
 
 const Levels = [
     "Exercise 1: Printing",
@@ -112,14 +112,12 @@ const MainSite = () => {
     // State variable to set users output
     const [userOutput, setUserOutput] = useState("");
     const [result, setResult] = useState("");
-    const [collabtext, setcollabtext] = useState("collab is disabled.");
 
     // Loading state variable to show spinner
     // while fetching data
     const [loading, setLoading] = useState(false);
     const [allowNext, setAllowNext] = useState(false);
 
-    const [collab, setcollab] = useState(false);
 
     const editorRef = useRef(null);
 
@@ -167,23 +165,14 @@ const MainSite = () => {
     }
 
     function handleEditorDidMount(editor, monaco){
-        editorRef.current = editor;
         const doc = new Y.Doc();
-        const provider = new WebrtcProvider("monaco", doc);
+        const provider = new WebrtcProvider("test-room", doc);
         const type = doc.getText("monaco");
         const binding = new MonacoBinding(type,
             editorRef.current.getModel(),
             new Set([editorRef.current]),
-            provider.awareness);
-    }
-
-    function togglecollab(){
-        setcollab(!collab);
-        if(collab) {
-            setcollabtext("collab is enabled.");
-        }else{
-            setcollabtext("collab is disabled.");
-        }
+            provider.awareness
+        );
     }
 
     function nextLevel() {
@@ -211,7 +200,6 @@ const MainSite = () => {
                     />
                     <div className="main">
                         <div className="left-container">
-                            {!collab ? (
                             <Editor
                                 options={options}
                                 height="calc(100vh - 50px)"
@@ -225,24 +213,9 @@ const MainSite = () => {
                                 }}
                                 onMount={(editor) => {
                                     editorRef.current = editor;
+                                    //handleEditorDidMount();
                                 }}
                             />
-                            ) : (<Editor
-                                options={options}
-                                height="calc(100vh - 50px)"
-                                width="100%"
-                                theme={userTheme}
-                                language={userLang}
-                                defaultLanguage="javascript"
-                                defaultValue="// Enter your code here"
-                                onChange={(value) => {
-                                    setUserCode(value);
-                                }}
-                                onMount={(editor) => {
-                                    editorRef.current = editor;
-                                    handleEditorDidMount();
-                                }}
-                            />)}
                             <button className="run-btn" onClick={() => compile()}>
                                 Run
                             </button>
