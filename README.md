@@ -83,9 +83,8 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
     - Will be especially helpful for younger users who may need more guidance in the learning process.
 
-- **PeerJS (1 point)**
+- **Sentry (1 point)**
 
-- **Web Audio API (1 point)**
 
 ## Features by Alpha Version
 
