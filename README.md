@@ -38,23 +38,18 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
 - The platform is built with React Flow for basic frontend design and Three.js for 3D platform production.
 
-## Complexity Points
-
-- **React Flow (2 points)**
-
-    - Interactive node-based UIs will be used to create a user-friendly interface.
-    
+## Complexity Points  
 - **Three.js (2 points)**
 
     - Used to develop kid-friendly animations and interactive features to engage and stimulate children while they complete coding challenges.
 
     - Will be utilized to create a 3D environment in which mini users can solve coding puzzles.
 
-- **Twilio (1 point)**
+- **Judge0 (1 point)**
 
-    - Twilio will be used to enable mini users to communicate with each other using various media, including voice, SMS, and video.
+    - Judge0 will be used for compiling code from the browser.
     
-    - Twilio's authentication functionality will be utilized to ensure secure communication between users in duo mode.
+    - When the user runs their code, the code will be sent to the backend using the Judge0 API, which will compile the code and return it to the frontend.
 
 - **Monaco Editor (1 point)**
     
@@ -64,14 +59,6 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
     - The editor will be used to compile the code and provide feedback on the correctness of the user's solution.
 
-- **OpenAI (1 point)**
-
-    - OpenAI will be used to provide interactive hints for users when they are stuck on a coding challenge.
-
-    - Using machine learning algorithms, OpenAI can analyze the code being written and suggest possible solutions or provide feedback on the user's code.
-
-    - Will be especially helpful for younger users who may need more guidance in the learning process.
-
 - **Auth0 (1 point)**
 
     - Auth0 will be used for usser authentication and management.
@@ -80,13 +67,21 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
     - This will be especially important for protecting children's personal information and ensuring a safe and secure learning environment.
 
-- **Socket.io (1 point)**
+- **Socket.io (2 points)**
 
     - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
     - With Socket.io, the platform can support real-time updates and messaging, enabling the mini users to see each other's progress and communicate with each other in real-time during the versus mode.
 
 ## Complexity Points to be Attempted as a Bonus
+
+- **OpenAI (1 point)**
+
+    - OpenAI will be used to provide interactive hints for users when they are stuck on a coding challenge.
+
+    - Using machine learning algorithms, OpenAI can analyze the code being written and suggest possible solutions or provide feedback on the user's code.
+
+    - Will be especially helpful for younger users who may need more guidance in the learning process.
 
 - **PeerJS (1 point)**
 
