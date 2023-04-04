@@ -8,82 +8,94 @@
 
 ## Our Focus
 
-We will be **front-end focused**: making a 3D platform for children to learn basic coding (JavaScript) with fun games. There would be single, or duo-player (versus and teamwork) options.
+Our project was **front-end focused**: making a platform with 3D interactives/animations for children to learn basic coding (JavaScript) through fun games. There is a single-player and duo-player (versus) mode.
 
 ## Team Members
 
-**Anabelle Hsiao** - 1007648770
+**Shu Sun** - 1005948487
 
 **Nevin Wong** - 1005391434
 
-**Shu Sun** - 1005948487
+**Anabelle Hsiao** - 1007648770 [unfortunately, Anabelle was unable to continue working on the project due to an injury]
+
+## Application URL
+
+[insert URL here]
 
 ## Description of Web Application
 
-> "Codestruction Zone: A real-time 3D platform for children to learn basic coding (JavaScript) with fun games."
+> "Codestruction Zone: A 3D-animated platform for children to learn basic coding (JavaScript) with fun games."
 
-- The application is a 3D platform for children to learn basic coding (JavaScript) with fun games.
+- The application is a 3D-animated interactive platform for children to learn basic coding (JavaScript) with fun games.
 
 - The platform offers both single and duo-player options.
 
 - In the single player mode, the user solves the code by themselves.
 
-- In the duo player mode, two mini users compete or cooperate to solve coding puzzles.
+- In the duo player mode, two mini users compete to solve coding puzzles. We give the two mini users the same set of puzzles; whoever is the first to pass all of them wins!
 
-    - **Versus mode:** We will give the two mini users the same puzzle; whoever gets it first wins
-    
-    - **Teamwork mode:**  Given a *harder* code puzzle, the mini users need to learn how to cooperate with each other and solve the questions together
-
-- Accomplishment badges are given to the mini users to motivate them.
-
-- The platform is built with React Flow for basic frontend design and Three.js for 3D platform production.
+- The platform is built with the React framework, and uses Three.js for 3D animations/interactives.
 
 ## Complexity Points  
 - **Three.js (2 points)**
 
-    - Used to develop kid-friendly animations and interactive features to engage and stimulate children while they complete coding challenges.
+    - Used to develop kid-friendly animations and interactive features to engage and stimulate children while they complete coding challenges (e.g. title animation, compiling animation).
 
-    - Will be utilized to create a 3D environment in which mini users can solve coding puzzles.
+    - Utilized to imbue a 3D kid-friendly environment in which mini users can solve coding puzzles.
 
 - **Judge0 (1 point)**
 
-    - Judge0 will be used for compiling code from the browser.
+    - Judge0 is used for compiling code from the browser.
     
-    - When the user runs their code, the code will be sent to the backend using the Judge0 API, which will compile the code and return it to the frontend.
+    - When the user runs their code, the code is sent to the backend using the Judge0 API, which santizes the code, compiles the code, and returns the output to the frontend.
+
+    - Errors in the users' code is also caught by Judge0 and error information is sent back to the frontend.
 
 - **Monaco Editor (1 point)**
     
-    - Versatile code editor that will be used for the coding challenges.
+    - Versatile code editor used for the coding challenges (same one used to power VS Code)
     
     - Provides a user-friendly interface for users to write and test their code.
 
-    - The editor will be used to compile the code and provide feedback on the correctness of the user's solution.
+    - The editor is used to compile the code and provide feedback on the correctness of the user's solution.
 
 - **Auth0 (1 point)**
 
-    - Auth0 will be used for usser authentication and management.
+    - Auth0 is used for user authentication and management.
 
-    - The platform will allow users to create their own profiles, track their progress, and earn badges for completing coding challenges.
+    - The platform allows users to create their own profiles via their email.
 
-    - This will be especially important for protecting children's personal information and ensuring a safe and secure learning environment.
+    - This will be especially important for protecting children's personal information, and ensuring a safe and secure learning environment.
 
 - **Socket.io (2 points)**
 
     - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
-    - With Socket.io, the platform can support real-time updates and messaging, enabling the mini users to see each other's progress and communicate with each other in real-time during the versus mode.
+    - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they have won or lost) in real-time during the versus mode.
 
-## Complexity Points to be Attempted as a Bonus
+## Complexity Points that were Attempted as a Bonus
+
+Although we attempted to incorporate OpenAI and Sentry into our project, the work completed on project regarding these points remains partially done (as can be seen in the code), and isn't functional to the user. As such, we cannot consider these complexity points completed, but will give an overview of what we attempted to do.
 
 - **OpenAI (1 point)**
 
-    - OpenAI will be used to provide interactive hints for users when they are stuck on a coding challenge.
+    - OpenAI was meant to be used to provide interactive hints for users when they were stuck on a coding challenge.
 
-    - Using machine learning algorithms, OpenAI can analyze the code being written and suggest possible solutions or provide feedback on the user's code.
+    - Would have powered *ConstructionHatGPT*, a digital assistant that takes the form of an anthropomorphic 3D-animated construction hat.
 
-    - Will be especially helpful for younger users who may need more guidance in the learning process.
+    - The chat bot would give the child hints using encouraging and friendly language.
+
+    - Using machine learning algorithms, OpenAI was meant to analyze the code being written and suggest possible solutions or provide feedback on the user's code.
+
+    - Would have been especially helpful for younger users who may need more guidance in the learning process.
 
 - **Sentry (1 point)**
+
+    - Sentry was intended to be used as a tool for error tracking and monitoring.
+
+    - Would have helped in identifying and fixing errors that occur during runtime, before they impact the user experience.
+
+Although we were unable to fully implement these complexity points, we gained valuable experience in attempting to incorporate them.
 
 ## Video Presentation
 
@@ -93,49 +105,40 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
 **Focus:** Front-end implemented
 
-- [ ] Basic animations and game mechanics implemented using Three.js
+- [x] Basic animations and game mechanics implemented using Three.js
 
-- [ ] React Flow integrated for interactive node-based UIs
+- [x] Basic logic and structure of the platform developed
 
-- [ ] Basic logic and structure of the platform developed
+- [x] Monaco code editor and Judge0 integrated, code editing and compiling possible
 
-- [ ] Basic coding challenges for single player mode created
+- [x] Basic coding challenges for single player mode created
 
 ## Features by Beta Version
 
-**Focus:** Pseudo-backend implemented
+**Focus:** Backend implemented
 
-- [ ] User authentication system set up using Auth0
+- [x] Basic server infrastructure set up and tested
 
-- [ ] Pseudo-backend developed to handle game logic for single player mode
+- [x] User authentication system set up using Auth0
 
-- [ ] Pseudo-backend developed to handle communication between two mini users in duo mode, using Twilio
+- [x] Backend developed to handle game logic for single player mode
 
-- [ ] Additional coding challenges for both single and duo player modes created
-
-- [ ] Basic system for accomplishment badges added
-
-- [ ] Basic server infrastructure set up and tested
+- [x] Full set of coding challenges for both single and duo player modes created
 
 ## Features by Final version
 
 **Focus:** Database, servers implemented and up
 
-- [ ] ShareDB integrated for real-time database storage, basic database schema designed and implemented
+- [x] Full frontend styling using creating an aesthetic, responsive, elegant frontend design.
 
-- [ ] Stores challenges based on difficulty, topic, and other parameters
+- [x] Backend developed to handle communication between two mini users in versus mode, using Socket.io
 
-- [ ] User information database created to store user profiles, achievements, and progress
+- [x] Landing page 3D animations and design integrated
 
-- [ ] Accomplishment badge system improved with more badges and levels
+- [x] Game room functioning (generation of game room codes, storing game room data using backend) implemented
 
-- [ ] Code challenges can be loaded and served dynamically from server
-
-- [ ] Integration with OpenAI for providing interactives hints for mini-users
-
-- [ ] Integration with Web Audio API for improved sound and music quality
+- [x] Versus mode implementation completed and tested on frontend (Socket.io)
 
 ---
 
-Now let's start the Codestruction! 👷🚧🐱‍💻
-
+We had a blast with the Codestruction of our project! 👷🚧🐱‍💻
