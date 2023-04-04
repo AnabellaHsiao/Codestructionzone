@@ -2,11 +2,16 @@ import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-const TitleInteractive = () => {
+const TitleInteractive = (props) => {
   const containerStyle = {
-    width: "400px",
-    height: "150px",
+    width: props.width,
+    height: props.height,
   };
+
+  if (props.center) {
+    containerStyle.marginLeft = "auto";
+    containerStyle.marginRight = "auto";
+  }
 
   const containerRef = useRef();
 
@@ -24,7 +29,7 @@ const TitleInteractive = () => {
     camera.position.set(1, 1.5, 10);
     camera.lookAt(1, 1.5, 0);
 
-    const renderer = new THREE.WebGLRenderer({ alpha : true});
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);

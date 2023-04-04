@@ -1,37 +1,50 @@
-html {background-color: #474747}
+html {
+  background-color: #474747;
+}
 
 .landing {
-    display: block;
-    margin: auto;
-    width: 24em;
-    flex: 40%;
-    flex-direction: column;
-    padding: 5px;
+  display: block;
+  margin: 50px auto;
+  width: 70%;
+  flex: 40%;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.title {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .log-in {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    height: auto;
-    font-size: 22px;
-    font-weight: bold;
-    background-color: #ffcc00;
-    border: none;
-    border-radius: 4px;
-    transition: 0.3s;
-    cursor: pointer;
-    padding: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.log-in:hover {
+  background-color: aliceblue;
+  font-size: 30px;
 }
 
 .landingtext {
-    margin-left: auto;
-    margin-right: auto;
-    width: 20em;
-    flex: 40%;
-    color: #ffcc00;
-    white-space: pre-line;
-    font-size: 24px;
-    padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 40%;
+  color: #ffcc00;
+  white-space: pre-line;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
 }
