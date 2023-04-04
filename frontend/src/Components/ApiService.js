@@ -3,10 +3,9 @@ import Axios from "axios";
 const compile = (userCode) => {
   return Axios.post(`http://localhost:8000/compiler`, {
     code: userCode,
-  })
-    .then((res) => {
-      return res;
-    })
+  }).then((res) => {
+    return res;
+  });
 };
 
 // No use at the moment, but may be used in the future

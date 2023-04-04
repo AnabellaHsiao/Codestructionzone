@@ -1,7 +1,7 @@
 import MainSite from "./MainSite";
 
 function SinglePlayerMode() {
-  return <MainSite mode="0"/>;
+  return <MainSite mode="0" />;
 }
 
 export default SinglePlayerMode;

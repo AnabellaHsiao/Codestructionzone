@@ -1,6 +1,6 @@
 # Codestruction Zone
 
-## Project Title and Team Name 
+## Project Title and Team Name
 
 **Team Name:** Dark Web Illuminati
 
@@ -36,42 +36,43 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 - The platform is built with the React framework, and uses Three.js for visually stimulating 3D animations/interactives.
 
-## Complexity Points  
+## Complexity Points
+
 - **Three.js (2 points)**
 
-    - Used to develop kid-friendly animations and interactive features to engage and stimulate children while they complete coding challenges (e.g. title animation, compiling animation).
+  - Used to develop kid-friendly animations and interactive features to engage and stimulate children while they complete coding challenges (e.g. title animation, compiling animation).
 
-    - Utilized to imbue a 3D kid-friendly environment in which mini users can solve coding puzzles.
+  - Utilized to imbue a 3D kid-friendly environment in which mini users can solve coding puzzles.
 
 - **Judge0 (1 point)**
 
-    - Judge0 is used for compiling code from the browser.
-    
-    - When the user runs their code, the code is sent to the backend using the Judge0 API, which santizes and compiles the code, then returns its output to the frontend.
+  - Judge0 is used for compiling code from the browser.
 
-    - Errors in the users' code is also caught by Judge0 and error information is sent back to the frontend.
+  - When the user runs their code, the code is sent to the backend using the Judge0 API, which santizes and compiles the code, then returns its output to the frontend.
+
+  - Errors in the users' code is also caught by Judge0 and error information is sent back to the frontend.
 
 - **Monaco Editor (1 point)**
-    
-    - Versatile code editor used for the coding challenges (same one used to power VS Code)
-    
-    - Provides a user-friendly interface for users to write and test their code.
 
-    - The editor is used to compile the code and provide feedback on the correctness of the user's solution.
+  - Versatile code editor used for the coding challenges (same one used to power VS Code)
+
+  - Provides a user-friendly interface for users to write and test their code.
+
+  - The editor is used to compile the code and provide feedback on the correctness of the user's solution.
 
 - **Auth0 (1 point)**
 
-    - Auth0 is used for user authentication and management.
+  - Auth0 is used for user authentication and management.
 
-    - The platform allows users to create their own profiles via their email.
+  - The platform allows users to create their own profiles via their email.
 
-    - This will be especially important for protecting children's personal information, and ensuring a safe and secure learning environment.
+  - This will be especially important for protecting children's personal information, and ensuring a safe and secure learning environment.
 
 - **Socket.io (2 points)**
 
-    - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
+  - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
-    - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they have won or lost) in real-time during the versus mode.
+  - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they have won or lost) in real-time during the versus mode.
 
 ## Complexity Points that were Attempted as a Bonus
 
@@ -79,21 +80,21 @@ Although we attempted to incorporate OpenAI and Sentry into our project, the wor
 
 - **OpenAI (1 point)**
 
-    - OpenAI was meant to be used to provide interactive hints for users when they were stuck on a coding challenge.
+  - OpenAI was meant to be used to provide interactive hints for users when they were stuck on a coding challenge.
 
-    - Would have powered *ConstructionHatGPT*, a digital assistant that takes the form of an anthropomorphic 3D-animated construction hat.
+  - Would have powered _ConstructionHatGPT_, a digital assistant that takes the form of an anthropomorphic 3D-animated construction hat.
 
-    - The chat bot would give the child hints using encouraging and friendly language.
+  - The chat bot would give the child hints using encouraging and friendly language.
 
-    - Using machine learning algorithms, OpenAI was meant to analyze the code being written and suggest possible solutions or provide feedback on the user's code.
+  - Using machine learning algorithms, OpenAI was meant to analyze the code being written and suggest possible solutions or provide feedback on the user's code.
 
-    - Would have been especially helpful for younger users who may need more guidance in the learning process.
+  - Would have been especially helpful for younger users who may need more guidance in the learning process.
 
 - **Sentry (1 point)**
 
-    - Sentry was intended to be used as a tool for error tracking and monitoring.
+  - Sentry was intended to be used as a tool for error tracking and monitoring.
 
-    - Would have helped in identifying and fixing errors that occur during runtime, before they impact the user experience.
+  - Would have helped in identifying and fixing errors that occur during runtime, before they impact the user experience.
 
 Although we were unable to fully implement these complexity points, we gained valuable experience in attempting to incorporate them.
 

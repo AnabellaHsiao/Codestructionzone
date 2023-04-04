@@ -18,5 +18,4 @@ export const User = sequelize.define("User", {
     type: DataTypes.INTEGER,
     defaultValue: 1,
   },
-
 });

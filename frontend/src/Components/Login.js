@@ -14,7 +14,7 @@ import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
 import ApiService from "./ApiService";
-import {useAuth0} from '@auth0/auth0-react'
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Copyright(props) {
   return (
@@ -38,7 +38,7 @@ const theme = createTheme();
 
 export default function Login() {
   const [Signup, setSignup] = useState(false);
-  const {loginWithRedirect, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -48,33 +48,24 @@ export default function Login() {
       password: data.get("password"),
     });
 
-  if(Signup){
-     ApiService.Signup(data)
-       .then((res) => {
-         console.log(res);
-       })
-       .then(() => {});
-
-  }else
-  {
+    if (Signup) {
       ApiService.Signup(data)
         .then((res) => {
           console.log(res);
         })
         .then(() => {});
-
-
-  }
-    
- 
-    
+    } else {
+      ApiService.Signup(data)
+        .then((res) => {
+          console.log(res);
+        })
+        .then(() => {});
+    }
   };
-    const Toggle = (event) => {
-      event.preventDefault();
-      (Signup? setSignup(false):setSignup(true));
-     
-     
-    };
+  const Toggle = (event) => {
+    event.preventDefault();
+    Signup ? setSignup(false) : setSignup(true);
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -125,14 +116,15 @@ export default function Login() {
               label="Remember me"
             />
             !isAuthenticated && (
-              <Button onClick={() => loginWithRedirect()}
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
-                {Signup ? " Sign Up" : "Sign In"}
-              </Button>
+            <Button
+              onClick={() => loginWithRedirect()}
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              {Signup ? " Sign Up" : "Sign In"}
+            </Button>
             )
             <Grid container>
               <Grid item xs>
