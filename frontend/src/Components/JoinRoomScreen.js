@@ -5,7 +5,7 @@ import OpponentWon from "./OpponentWon";
 import MainSite from "./MainSite";
 import { Link } from "react-router-dom";
 
-const socket = io("http://localhost:8000"); // Backend
+const socket = io(process.env.REACT_APP_BACKEND_URL); // Backend
 
 const WIN_LEVEL = 7;
 
