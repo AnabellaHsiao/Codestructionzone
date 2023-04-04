@@ -1,8 +1,14 @@
 function YouWon() {
   return (
-    <div>
+    <div className="container">
       <h1>You Won!</h1>
-      <button onClick={() => window.location.reload()}>Play Again</button>
+      <img src="/assets/youwon.gif" style={{ height: "40%" }}></img>
+      <button
+        className="big-btn play-again"
+        onClick={() => window.location.reload()}
+      >
+        Play Again
+      </button>
     </div>
   );
 }

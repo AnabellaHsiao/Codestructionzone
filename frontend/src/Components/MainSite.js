@@ -170,7 +170,6 @@ const MainSite = (props) => {
     // Post request to compile endpoint
     ApiService.compile(userCode)
       .then(async (res) => {
-        // if 429 response code
         if (res.data.status.id === 3) {
           await setUserOutput(res.data.stdout);
           await changeResult(res.data.stdout);
@@ -179,7 +178,15 @@ const MainSite = (props) => {
         }
       })
       .catch((err) => {
-        console.log(err);
+        if (
+          err.response &&
+          err.response.status &&
+          err.response.status === 429
+        ) {
+          setResult(
+            "It looks like our construction partner, Judge0, who helps us make sure our code is strong and sturdy, is taking a little break right now. It's like when the construction workers take a break from building to rest their muscles and get ready for more work! But don't worry, soon we'll be back to codestructing (or destroying our code to make it better!) and building amazing things with Judge0 by our side. "
+          );
+        }
       })
       .then(() => {
         setLoading(false);

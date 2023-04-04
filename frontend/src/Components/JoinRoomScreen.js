@@ -3,6 +3,7 @@ import io from "socket.io-client";
 import YouWon from "./YouWon";
 import OpponentWon from "./OpponentWon";
 import MainSite from "./MainSite";
+import { Link } from "react-router-dom";
 
 const socket = io("http://localhost:8000"); // Backend
 
@@ -14,7 +15,7 @@ function JoinRoomScreen() {
   const [gameRoomReady, setGameRoomReady] = useState(false);
   const [currLevel, setCurrLevel] = useState(1);
   const [opponentLevel, setOpponentLevel] = useState(1);
-  const [errorMsg, setErrorMsg] = useState(null);
+  //   const [errorMsg, setErrorMsg] = useState(null);
 
   function handleCreateRoom() {
     socket.emit("create room");
@@ -52,11 +53,13 @@ function JoinRoomScreen() {
     });
 
     socket.on("room full", (message) => {
-      setErrorMsg(message);
+      alert(message);
+      //   setErrorMsg(message);
     });
 
     socket.on("room does not exist", (message) => {
-      setErrorMsg(message);
+      alert(message);
+      //   setErrorMsg(message);
     });
 
     socket.on("opponent leveled up", (message, newLevel) => {
@@ -64,7 +67,8 @@ function JoinRoomScreen() {
     });
 
     socket.on("opponent left", (message) => {
-      setErrorMsg(message);
+      alert(message);
+      //   setErrorMsg(message);
     });
 
     return () => {
@@ -87,29 +91,53 @@ function JoinRoomScreen() {
             />
           )}
           {!gameRoomReady && (
-            <div>
+            <div className="container">
               {!currentRoomId && (
-                <div>
-                  <button onClick={handleCreateRoom}>Create new room</button>
+                <div className="container">
+                  <button
+                    className="big-btn create-room-btn"
+                    onClick={handleCreateRoom}
+                  >
+                    Create new room
+                  </button>
                   <input
                     type="text"
                     placeholder="Enter room ID"
                     onChange={(e) => setTargetRoomId(e.target.value)}
+                    className="room-id-input"
                   />
-                  <button onClick={() => handleJoinRoom(targetRoomId)}>
+                  <button
+                    className="change-mode join-room-btn"
+                    onClick={() => handleJoinRoom(targetRoomId)}
+                  >
                     Join room
                   </button>
                 </div>
               )}
-              {currentRoomId && <div>Current room: {currentRoomId}</div>}
+              {currentRoomId && (
+                <div className="construction-vibes">
+                  <div>Current room:</div>
+                  <div className="room-id">{currentRoomId}</div>
+                  <div>Give your opponent this room ID!</div>
+                </div>
+              )}
+              {/* test buttons */}
               {/* <div>Game room ready: {gameRoomReady ? "Yes" : "No"}</div> */}
               {/* <div>Current level: {currLevel}</div>
-          <button onClick={handleLevelUp}>Level myself up</button>
-          <div>Opponent level: {opponentLevel}</div> */}
-              {errorMsg && <div>Error message: {errorMsg}</div>}
+              <button onClick={handleLevelUp}>Level myself up</button>
+              <div>Opponent level: {opponentLevel}</div> */}
+              {/* {errorMsg && <div>Error message: {errorMsg}</div>} */}
               {currentRoomId && (
-                <button onClick={handleLeaveRoom}>Leave room</button>
+                <button
+                  className="change-mode leave-room-btn"
+                  onClick={handleLeaveRoom}
+                >
+                  Leave room
+                </button>
               )}
+              <Link to="/">
+                <button className="change-mode-corner">Change mode</button>
+              </Link>{" "}
             </div>
           )}
         </div>
