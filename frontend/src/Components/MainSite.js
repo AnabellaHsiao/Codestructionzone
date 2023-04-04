@@ -92,7 +92,9 @@ const baseState = [
 
 const checkup = ["console.log", "x*y", "else", "for", "while", "A[5]"];
 
-const MainSite = () => {
+const modeTexts = ["Single-player mode", "Versus mode"];
+
+const MainSite = (props) => {
   const { isAuthenticated } = useAuth0();
 
   // State variable to set users source code
@@ -147,6 +149,7 @@ const MainSite = () => {
       currentLevel === 6
     ) {
       setResult("Congratulations! You completed all Levels!");
+      props.handleLevelUp();
     } else {
       setResult("Try Again!");
     }
@@ -231,6 +234,10 @@ const MainSite = () => {
     if (editorRef.current) {
       editorRef.current.setValue(baseState[currentLevel]);
     }
+    // Versus
+    if (props.mode && props.mode === "1") {
+      props.handleLevelUp();
+    }
   }
 
   return (
@@ -238,12 +245,14 @@ const MainSite = () => {
       <div>
         <div className="App">
           <Navbar
-            userLang={userLang}
-            setUserLang={setUserLang}
             userTheme={userTheme}
             setUserTheme={setUserTheme}
             fontSize={fontSize}
             setFontSize={setFontSize}
+            modeText={modeTexts[props.mode]}
+            opponentLevel={props.opponentLevel}
+            handleLeaveRoom={props.handleLeaveRoom}
+            mode={props.mode}
           />
           <div className="main">
             <div className="left-container">

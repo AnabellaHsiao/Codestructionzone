@@ -1,13 +1,11 @@
-import Landing from "./Components/Landing"
-import MainSite from "./Components/MainSite"
-
+import Landing from "./Components/Landing";
+import CodestructionZone from "./Components/CodestructionZone";
 
 function App() {
-
   return (
     <main>
-      <Landing/>
-      <MainSite/>
+      <Landing />
+      <CodestructionZone />
     </main>
   );
 }
