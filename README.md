@@ -34,7 +34,7 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 - In the duo player mode, two mini users compete to solve coding puzzles. We give the two mini users the same set of puzzles; whoever is the first to pass all of them wins!
 
-- The platform is built with the React framework, and uses Three.js for 3D animations/interactives.
+- The platform is built with the React framework, and uses Three.js for visually stimulating 3D animations/interactives.
 
 ## Complexity Points  
 - **Three.js (2 points)**
@@ -47,7 +47,7 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
     - Judge0 is used for compiling code from the browser.
     
-    - When the user runs their code, the code is sent to the backend using the Judge0 API, which santizes the code, compiles the code, and returns the output to the frontend.
+    - When the user runs their code, the code is sent to the backend using the Judge0 API, which santizes and compiles the code, then returns its output to the frontend.
 
     - Errors in the users' code is also caught by Judge0 and error information is sent back to the frontend.
 
@@ -121,7 +121,7 @@ Although we were unable to fully implement these complexity points, we gained va
 
 - [x] User authentication system set up using Auth0
 
-- [x] Backend developed to handle game logic for single player mode
+- [x] Backend developed to handle game logic for fully functional single-player mode
 
 - [x] Full set of coding challenges for both single and duo player modes created
 
