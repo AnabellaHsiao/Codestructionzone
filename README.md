@@ -85,6 +85,9 @@ We will be **front-end focused**: making a 3D platform for children to learn bas
 
 - **Sentry (1 point)**
 
+## Video Presentation
+
+- https://www.youtube.com/watch?v=jekK6Y8DgtU
 
 ## Features by Alpha Version
 
