@@ -5,6 +5,7 @@
 **Team Name:** Dark Web Illuminati
 
 **Project Title:** Codestruction Zone
+![image](https://user-images.githubusercontent.com/77652973/230238490-d89ad8d8-0a95-4331-ad2b-71fe743d31db.png)
 
 ## Our Focus
 
@@ -22,7 +23,7 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 https://client.codestruction.live/
 
-Our project was deployed via Amazon Lightsail.
+Our project was deployed via an AWS Lightsail VM.
 
 _Note_: the 3D animations may require a bit of time to load, but they'll eventually appear.
 
@@ -138,7 +139,7 @@ Although we were unable to fully implement these complexity points, we gained va
 
 ## Features by Final version
 
-**Focus:** Versus mode implemented, webapp deployed
+**Focus:** Versus mode implemented, application deployed
 
 - [x] Full frontend styling using creating an aesthetic, responsive, elegant design
 
@@ -150,7 +151,7 @@ Although we were unable to fully implement these complexity points, we gained va
 
 - [x] Versus mode implementation completed and tested on frontend (Socket.io)
 
-- [ ] Application deployed via Amazon Lightsail
+- [x] Application deployed via AWS Lightsail VM, and a DNS domain from name.com.
 
 ---
 
