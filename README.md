@@ -83,6 +83,8 @@ Our project was deployed via Amazon Lightsail.
   - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
   - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they've won or lost) in real-time during the versus mode.
+  
+  - A Redis adapter was used with Socket.io to enable horizontal scaling.
 
 ## Complexity Points that were Attempted as a Bonus
 
@@ -136,9 +138,9 @@ Although we were unable to fully implement these complexity points, we gained va
 
 **Focus:** Versus mode implemented, webapp deployed
 
-- [x] Full frontend styling using creating an aesthetic, responsive, elegant design.
+- [x] Full frontend styling using creating an aesthetic, responsive, elegant design
 
-- [x] Backend developed to handle communication between two mini users in versus mode, using Socket.io
+- [x] Backend developed to handle communication between two mini users in versus mode, using Socket.io and the Redis adapter
 
 - [x] Landing page 3D animations and design integrated
 
