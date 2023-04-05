@@ -24,7 +24,7 @@ https://client.codestruction.live/
 
 Our project was deployed via Amazon Lightsail.
 
-*Note*: the 3D animations may require a bit of time to load, but they'll eventually appear.
+_Note_: the 3D animations may require a bit of time to load, but they'll eventually appear.
 
 ## Video Presentation
 
@@ -85,7 +85,7 @@ Our project was deployed via Amazon Lightsail.
   - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
   - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they've won or lost) in real-time during the versus mode.
-  
+
   - A Redis adapter was used with Socket.io to enable horizontal scaling.
 
 ## Complexity Points that were Attempted as a Bonus

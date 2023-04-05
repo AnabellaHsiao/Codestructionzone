@@ -10,12 +10,15 @@ const compile = (userCode) => {
 
 // No use at the moment, but may be used in the future
 const callChatBot = (level, details, task, userCode) => {
-  return Axios.post(process.env.REACT_APP_BACKEND_URL + "/construction-hat-bot", {
-    level: level,
-    details: details,
-    task: task,
-    userCode: userCode,
-  }).then((res) => {
+  return Axios.post(
+    process.env.REACT_APP_BACKEND_URL + "/construction-hat-bot",
+    {
+      level: level,
+      details: details,
+      task: task,
+      userCode: userCode,
+    }
+  ).then((res) => {
     console.log(res);
     return res;
   });
