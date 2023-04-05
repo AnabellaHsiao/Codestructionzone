@@ -20,13 +20,21 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 ## Application URL
 
+Our project was deployed via Amazon Lightsail.
+
 [insert URL here]
+
+## Video Presentation
+
+- https://www.youtube.com/watch?v=jekK6Y8DgtU
 
 ## Description of Web Application
 
 > "Codestruction Zone: A 3D-animated platform for children to learn basic coding (JavaScript) with fun games."
 
-- The application is a 3D-animated interactive platform for children to learn basic coding (JavaScript) with fun games.
+- The application is a 3D-animated interactive platform for children to learn basic programming.
+
+- The exercises cover the basics of programming, including printing, arithmetic, conditionals, loops, and arrays.
 
 - The platform offers both single and duo-player options.
 
@@ -34,19 +42,21 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 - In the duo player mode, two mini users compete to solve coding puzzles. We give the two mini users the same set of puzzles; whoever is the first to pass all of them wins!
 
+- Players share a room code to their opponent to play together.
+
 - The platform is built with the React framework, and uses Three.js for visually stimulating 3D animations/interactives.
 
 ## Complexity Points
 
 - **Three.js (2 points)**
 
-  - Used to develop kid-friendly animations and interactive features to engage and stimulate children while they complete coding challenges (e.g. title animation, compiling animation).
+  - Used to develop kid-friendly animations and interactive features to engage and stimulate childrens' brains while they complete coding challenges (e.g. title animation, compiling animation).
 
-  - Utilized to imbue a 3D kid-friendly environment in which mini users can solve coding puzzles.
+  - Utilized to imbue a 3D kid-friendly environment in which they can solve coding puzzles.
 
 - **Judge0 (1 point)**
 
-  - Judge0 is used for compiling code from the browser.
+  - Judge0 is used for compiling code the browser's code.
 
   - When the user runs their code, the code is sent to the backend using the Judge0 API, which santizes and compiles the code, then returns its output to the frontend.
 
@@ -58,13 +68,13 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
   - Provides a user-friendly interface for users to write and test their code.
 
-  - The editor is used to compile the code and provide feedback on the correctness of the user's solution.
+  - The editor is used to visualize the code and provide feedback on the correctness of the user's solution.
 
 - **Auth0 (1 point)**
 
   - Auth0 is used for user authentication and management.
 
-  - The platform allows users to create their own profiles via their email.
+  - The platform allows users to create their own profiles via email.
 
   - This will be especially important for protecting children's personal information, and ensuring a safe and secure learning environment.
 
@@ -72,7 +82,7 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
   - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
-  - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they have won or lost) in real-time during the versus mode.
+  - With Socket.io, the platform supports real-time updates, enabling the mini users to see each other's progress (e.g. what level they are on, whether they've won or lost) in real-time during the versus mode.
 
 ## Complexity Points that were Attempted as a Bonus
 
@@ -98,17 +108,13 @@ Although we attempted to incorporate OpenAI and Sentry into our project, the wor
 
 Although we were unable to fully implement these complexity points, we gained valuable experience in attempting to incorporate them.
 
-## Video Presentation
-
-- https://www.youtube.com/watch?v=jekK6Y8DgtU
-
 ## Features by Alpha Version
 
 **Focus:** Front-end implemented
 
-- [x] Basic animations and game mechanics implemented using Three.js
-
 - [x] Basic logic and structure of the platform developed
+
+- [x] Basic animations and interactives implemented using Three.js
 
 - [x] Monaco code editor and Judge0 integrated, code editing and compiling possible
 
@@ -128,9 +134,9 @@ Although we were unable to fully implement these complexity points, we gained va
 
 ## Features by Final version
 
-**Focus:** Database, servers implemented and up
+**Focus:** Versus mode implemented, webapp deployed
 
-- [x] Full frontend styling using creating an aesthetic, responsive, elegant frontend design.
+- [x] Full frontend styling using creating an aesthetic, responsive, elegant design.
 
 - [x] Backend developed to handle communication between two mini users in versus mode, using Socket.io
 
@@ -139,6 +145,8 @@ Although we were unable to fully implement these complexity points, we gained va
 - [x] Game room functioning (generation of game room codes, storing game room data using backend) implemented
 
 - [x] Versus mode implementation completed and tested on frontend (Socket.io)
+
+- [ ] Application deployed via Amazon Lightsail
 
 ---
 
