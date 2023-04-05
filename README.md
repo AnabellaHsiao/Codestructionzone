@@ -20,9 +20,11 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 ## Application URL
 
+https://client.codestruction.live/
+
 Our project was deployed via Amazon Lightsail.
 
-[insert URL here]
+*Note*: the 3D animations may require a bit of time to load, but they'll eventually appear.
 
 ## Video Presentation
 
