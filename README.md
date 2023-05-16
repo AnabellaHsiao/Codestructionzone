@@ -27,7 +27,7 @@ Our project was deployed via an AWS Lightsail VM.
 
 _Note_: the 3D animations may require a bit of time to load, but they'll eventually appear.
 
-## Video Presentation
+## Video Presentation for first version
 
 - https://www.youtube.com/watch?v=jekK6Y8DgtU
 
