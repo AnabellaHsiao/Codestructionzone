@@ -49,7 +49,7 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
 - The platform is built with the React framework, and uses Three.js for visually stimulating 3D animations/interactives.
 
-## Complexity Points
+#Features
 
 - **Three.js**
 
@@ -89,29 +89,8 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
   - A Redis adapter was used with Socket.io to enable horizontal scaling.
 
-## Complexity Points that were Attempted as a Bonus
 
-Although we attempted to incorporate OpenAI and Sentry into our project, the work completed on project regarding these points remains partially done (as can be seen in the code), and isn't functional to the user. As such, we cannot consider these complexity points completed, but will give an overview of what we attempted to do.
 
-- **OpenAI **
-
-  - OpenAI was meant to be used to provide interactive hints for users when they were stuck on a coding challenge.
-
-  - Would have powered _ConstructionHatGPT_, a digital assistant that takes the form of an anthropomorphic 3D-animated construction hat.
-
-  - The chat bot would give the child hints using encouraging and friendly language.
-
-  - Using machine learning algorithms, OpenAI was meant to analyze the code being written and suggest possible solutions or provide feedback on the user's code.
-
-  - Would have been especially helpful for younger users who may need more guidance in the learning process.
-
-- **Sentry**
-
-  - Sentry was intended to be used as a tool for error tracking and monitoring.
-
-  - Would have helped in identifying and fixing errors that occur during runtime, before they impact the user experience.
-
-Although we were unable to fully implement these complexity points, we gained valuable experience in attempting to incorporate them.
 
 ## Features by Alpha Version
 
