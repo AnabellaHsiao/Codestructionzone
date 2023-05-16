@@ -13,11 +13,11 @@ Our project was **front-end focused**: making a platform with 3D interactives/an
 
 ## Team Members
 
-**Shu Sun** - 1005948487
+**Shu Sun** 
 
-**Nevin Wong** - 1005391434
+**Nevin Wong**
 
-**Anabelle Hsiao** - 1007648770 [unfortunately, Anabelle was unable to continue working on the project due to an injury]
+**Anabelle Hsiao** 
 
 ## Application URL
 
@@ -51,13 +51,13 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
 ## Complexity Points
 
-- **Three.js (2 points)**
+- **Three.js**
 
   - Used to develop kid-friendly animations and interactive features to engage and stimulate childrens' brains while they complete coding challenges (e.g. title animation, compiling animation).
 
   - Utilized to imbue a 3D kid-friendly environment in which they can solve coding puzzles.
 
-- **Judge0 (1 point)**
+- **Judge0 **
 
   - Judge0 is used for compiling code the browser's code.
 
@@ -65,7 +65,7 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
   - Errors in the users' code is also caught by Judge0 and error information is sent back to the frontend.
 
-- **Monaco Editor (1 point)**
+- **Monaco Editor**
 
   - Versatile code editor used for the coding challenges (same one used to power VS Code)
 
@@ -73,7 +73,7 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
   - The editor is used to visualize the code and provide feedback on the correctness of the user's solution.
 
-- **Auth0 (1 point)**
+- **Auth0 **
 
   - Auth0 is used for user authentication and management.
 
@@ -81,7 +81,7 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
   - This will be especially important for protecting children's personal information, and ensuring a safe and secure learning environment.
 
-- **Socket.io (2 points)**
+- **Socket.io **
 
   - Simple and efficient way to establish bidirectional communication channels between web clients and servers.
 
@@ -93,7 +93,7 @@ _Note_: the 3D animations may require a bit of time to load, but they'll eventua
 
 Although we attempted to incorporate OpenAI and Sentry into our project, the work completed on project regarding these points remains partially done (as can be seen in the code), and isn't functional to the user. As such, we cannot consider these complexity points completed, but will give an overview of what we attempted to do.
 
-- **OpenAI (1 point)**
+- **OpenAI **
 
   - OpenAI was meant to be used to provide interactive hints for users when they were stuck on a coding challenge.
 
@@ -105,7 +105,7 @@ Although we attempted to incorporate OpenAI and Sentry into our project, the wor
 
   - Would have been especially helpful for younger users who may need more guidance in the learning process.
 
-- **Sentry (1 point)**
+- **Sentry**
 
   - Sentry was intended to be used as a tool for error tracking and monitoring.
 
